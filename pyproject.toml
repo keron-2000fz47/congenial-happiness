@@ -1,0 +1,29 @@
+[project]
+name = "pumpfun-trading-bot"
+version = "1.0.0"
+description = "Solana trading & sniping bot for pump.fun"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "solders>=0.21.0",
+    "solana>=0.35.0",
+    "anchorpy>=0.20.0",
+    "websockets>=12.0",
+    "aiohttp>=3.9.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0.0",
+    "construct>=2.10.0",
+    "base58>=2.1.1",
+    "grpcio>=1.60.0",
+    "protobuf>=4.25.0",
+]
+
+[project.scripts]
+pump_bot = "src.bot_runner:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]

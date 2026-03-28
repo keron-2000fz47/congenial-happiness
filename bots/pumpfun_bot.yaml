@@ -1,0 +1,24 @@
+# PumpFun Bot Configuration
+platform: "pump_fun"
+
+# RPC settings
+max_rps: 25
+
+# Subscription method: "logs" or "block"
+subscription_method: "logs"
+
+# Trading parameters
+buy_amount_sol: 0.01        # Amount in SOL to spend per snipe
+slippage_bps: 500           # Slippage tolerance in basis points (5%)
+
+# Exit strategy
+take_profit_pct: 50.0       # Sell when profit reaches 50%
+stop_loss_pct: 20.0         # Sell when loss reaches 20%
+
+# Transaction settings
+priority_fee_lamports: 100000   # Priority fee in lamports
+max_retries: 3                   # Max transaction retry attempts
+retry_delay_ms: 500              # Delay between retries in ms
+
+# Geyser (optional - leave empty to disable)
+use_geyser: false
